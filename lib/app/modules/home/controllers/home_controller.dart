@@ -19,7 +19,7 @@ class HomeController extends GetxController {
 
   void reorder(oldIndex, newIndex) {
     if (newIndex > oldIndex) {
-      newIndex = -1;
+      newIndex -= 1;
     }
     final items = myFav.removeAt(oldIndex);
     myFav.insert(newIndex, items);
